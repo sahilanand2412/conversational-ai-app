@@ -14,7 +14,7 @@ def chat_fn(message, history, model):
 
 with gr.Blocks() as demo:
     gr.Markdown("## Conversational AI Chat")
-    model = gr.Dropdown(["openai", "gemini", "claude"], label="Select LLM", value="openai")
+    model = gr.Dropdown(["gemini", "openai", "claude", "mistral"], label="Select LLM", value="gemini")
     chatbot = gr.Chatbot()
     msg = gr.Textbox()
     msg.submit(chat_fn, [msg, chatbot, model], chatbot)

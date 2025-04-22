@@ -7,7 +7,8 @@ router = APIRouter()
 class ChatRequest(BaseModel):
     message: str
     session_id: str
-    model: str = "openai"  # default
+    model: str = "gemini"  # Default changed to Gemini
+ # default
 
 @router.post("/")
 async def chat(request: ChatRequest):
