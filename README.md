@@ -31,3 +31,58 @@ This is a production-ready Conversational AI application built as part of a 24-h
 ```bash
 git clone https://github.com/your-username/conversational-ai-app.git
 cd conversational-ai-app
+
+2. Create .env File
+In the root of the project:
+
+touch .env
+Then add your Gemini API key:
+GEMINI_API_KEY=your-google-gemini-api-key
+
+3. Build & Start the App
+docker-compose up --build
+
+4. Access the App
+🧠 Gradio Chat UI: http://localhost:7860
+
+⚙️ FastAPI Docs: http://localhost:8000/docs
+
+📁 Folder Structure
+
+conversational-ai-app/
+├── backend/         # FastAPI backend server (MCP)
+│   ├── main.py
+│   ├── mcp/
+│   ├── llms/
+│   ├── utils/
+│   └── Dockerfile
+│
+├── frontend/        # Gradio frontend
+│   ├── app.py
+│   └── Dockerfile
+│
+├── docker-compose.yml
+├── requirements.txt
+├── .env (not tracked)
+├── .gitignore
+└── README.md
+
+
+🛠️ LLM Support
+Switch LLMs by selecting from the dropdown in the UI:
+
+gemini (default)
+
+openai
+
+claude (stub only)
+
+mistral (stub or real if integrated)
+
+🧪 Requirements
+✅ Docker
+
+✅ Docker Compose
+
+✅ Google Gemini API Key
+Get it here → https://ai.google.dev/gemini-api/docs/api-key
